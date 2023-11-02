@@ -1,0 +1,97 @@
+@mixin card{
+    width: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid white;
+    .header-card{
+        height: 50px;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid white;
+    }
+    .main-card{
+        height: 150px;
+        font-size: 14px;
+        font-weight: 400;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main-card-text{
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 48px;
+            }
+            h4{
+                padding-bottom: 25px;
+                padding-right: 5px;
+            }
+            p{
+                padding-top: 25px;
+                padding-left: 5px;
+            }
+        }  
+    }
+    .footer-card{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-footer-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+        line-height: 26px;
+        text-align: center;
+        height: 75px;
+        background-color: rgba(128, 128, 128, 0.25);
+    }
+}
+
+
+.skyblue{
+    @include card();
+    .header-card{
+        background-color: rgb(84, 194, 238);
+    }
+    .main-card{
+        background-color: skyblue;
+    }
+
+}
+.red{
+    @include card();
+    .header-card{
+        height: 70px;
+        background-color: rgb(92, 1, 1);
+    }
+    .main-card{
+        background-color: red;
+    }
+
+}
+.black{
+    @include card();
+    .header-card{
+        background-color: rgb(0, 0, 0);
+    }
+    .main-card{
+        background-color: rgb(26, 26, 26);
+    }
+
+}
+.green{
+    @include card();
+    .header-card{
+        background-color: rgb(0, 77, 0);
+    }
+    .main-card{
+        background-color: green;
+    }
+
+}
